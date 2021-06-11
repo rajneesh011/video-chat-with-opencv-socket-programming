@@ -4,16 +4,16 @@ import pickle
 import struct
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host_ip = '192.168.43.58'
+host_ip = 'client ip here'
 port = 1111
 print("Socket Created")
-print("\t\t\t\n-------------------------------------------------")
+print("\t\t\t\n************************************************")
 
 client_socket.connect((host_ip, port))
 data = b""
 payload_size = struct.calcsize("Q")
 print("Socket Accept")
-print("\t\t\t\n-------------------------------------------------")
+print("\t\t\t\n************************************************")
 
 while True:
     while len(data) < payload_size:
@@ -37,4 +37,4 @@ while True:
 client_socket.close()
 
 print("Thanks a lot!")
-print("\t\t\t\n-------------------------------------------------")
+print("\t\t\t\n************************************************")
