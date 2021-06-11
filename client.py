@@ -5,13 +5,15 @@ import struct
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host_ip = 'client ip here'
-port = 1111
+port = 2345
+print("\t\t\t\n************************************************")
 print("Socket Created")
 print("\t\t\t\n************************************************")
 
 client_socket.connect((host_ip, port))
 data = b""
 payload_size = struct.calcsize("Q")
+print("\t\t\t\n************************************************")
 print("Socket Accept")
 print("\t\t\t\n************************************************")
 
@@ -35,6 +37,6 @@ while True:
     if key == ord('q'):
         break
 client_socket.close()
-
-print("Thanks a lot!")
+print("\t\t\t\n************************************************")
+print("Thank you for connecting")
 print("\t\t\t\n************************************************")
